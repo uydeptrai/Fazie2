@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fazié</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Favicons -->
+        <link href="" rel="icon">
+        <link href="img/apple-favicon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"> 
+
+        <!-- Vendor CSS File -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="vendor/animate/animate.min.css" rel="stylesheet">
+        <link href="vendor/slick/slick.css" rel="stylesheet">
+        <link href="vendor/slick/slick-theme.css" rel="stylesheet">
+        <link href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+        <!-- Main Stylesheet File -->
+        <link href="css/hover-style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Grey with black text -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 12px;height: 11px;">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Chợ Tốt <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Nhà Tốt</a>
+                </li>
+        
+                <li class="nav-item active">
+                  <a class="nav-link active" href="#">Chợ Tốt Xe</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dành cho môi giới
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Gói pro</a>
+                          <a class="dropdown-item" href="#">Tài khoản doanh nghiệp</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Chuyên trang môi gi</a>
+                        </div>
+                      </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+            
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+              </form>
+            </div>
+          </nav>         -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="nav-bar">
+    <a class="navbar-brand" style="color: #ABC4FF;font-weight: 600;" href="#">Fazié</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" id="nav-bar-font">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="20" height="20" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M2 7h20a1 1 0 0 0 0-2H2a1 1 0 0 0 0 2zM22 11H2a1 1 0 0 0 0 2h20a1 1 0 0 0 0-2zM22 17H2a1 1 0 0 0 0 2h20a1 1 0 0 0 0-2z" fill="#000000" data-original="#000000" class=""></path></g></svg></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Mua bán</a>
+              <a class="dropdown-item" href="#">Cho thuê</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" id="search-form" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" id="btn-search" type="submit"><i><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="22" height="22" x="0" y="0" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M55.146 51.887 41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" fill="#EDF2FB" data-original="#000000" class=""></path></g></svg></i></button>
+                </form>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i style="margin-right: 6px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="20" height="20" x="0" y="0" viewBox="0 0 189.524 189.524" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(0.9999999999999993,0,0,0.9999999999999993,-2.842170943040401e-14,5.684341886080802e-14)"><path fill-rule="evenodd" d="M170.94 151.134c11.678-15.753 18.584-35.256 18.584-56.372C189.524 42.426 147.097 0 94.762 0 42.426 0 0 42.426 0 94.762c0 52.335 42.426 94.762 94.762 94.762 27.458 0 52.188-11.678 69.496-30.339a95.39 95.39 0 0 0 6.682-8.051zm-5.254-8.991c9.071-13.552 14.361-29.849 14.361-47.381 0-47.102-38.183-85.286-85.286-85.286-47.101 0-85.285 38.184-85.285 85.286 0 17.533 5.29 33.829 14.362 47.381 11.445-17.098 28.909-29.827 49.361-35.155-9.875-6.843-16.342-18.255-16.342-31.179 0-20.934 16.971-37.905 37.905-37.905s37.905 16.971 37.905 37.905c0 12.923-6.468 24.336-16.342 31.178 20.451 5.329 37.916 18.057 49.361 35.156zm-6.104 8.047c-13.299-21.869-37.353-36.476-64.819-36.476-27.467 0-51.522 14.607-64.821 36.477 15.642 18.275 38.878 29.857 64.82 29.857s49.178-11.583 64.82-29.858zm-64.82-45.952c15.701 0 28.429-12.727 28.429-28.429 0-15.701-12.727-28.429-28.429-28.429S66.333 60.109 66.333 75.81s12.728 28.428 28.429 28.428z" clip-rule="evenodd" fill="#000000" data-original="#000000" class=""></path></g></svg></i> Tài khoản
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                  <a class="dropdown-item" href="#">Đơn mua</a>
+                  <a class="dropdown-item" href="#">Đơn bán</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i style="margin-right: 6px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="20" height="20" x="0" y="0" viewBox="0 0 438.891 438.891" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g><path d="M347.968 57.503h-39.706V39.74c0-5.747-6.269-8.359-12.016-8.359h-30.824C258.108 10.483 239.822.034 218.924.034c-20.668-.777-39.467 11.896-46.498 31.347h-30.302c-5.747 0-11.494 2.612-11.494 8.359v17.763H90.923c-23.53.251-42.78 18.813-43.886 42.318v299.363c0 22.988 20.898 39.706 43.886 39.706h257.045c22.988 0 43.886-16.718 43.886-39.706V99.822c-1.106-23.506-20.356-42.068-43.886-42.319zm-196.441-5.224h28.735a11.496 11.496 0 0 0 9.927-9.404c3.094-13.474 14.915-23.146 28.735-23.51 13.692.415 25.335 10.117 28.212 23.51a11.494 11.494 0 0 0 10.449 9.404h29.78v41.796H151.527V52.279zm219.429 346.906c0 11.494-11.494 18.808-22.988 18.808H90.923c-11.494 0-22.988-7.314-22.988-18.808V99.822c1.066-11.964 10.978-21.201 22.988-21.42h39.706v26.645c.552 5.854 5.622 10.233 11.494 9.927h154.122a11.493 11.493 0 0 0 12.016-9.927V78.401h39.706c12.009.22 21.922 9.456 22.988 21.42v299.364z" fill="#000000" data-original="#000000" class="hovered-path"></path><path d="M179.217 233.569c-3.919-4.131-10.425-4.364-14.629-.522l-33.437 31.869-14.106-14.629c-3.919-4.131-10.425-4.363-14.629-.522a10.971 10.971 0 0 0 0 15.151l21.42 21.943a9.403 9.403 0 0 0 7.314 3.135 10.446 10.446 0 0 0 7.314-3.135l40.751-38.661c4.04-3.706 4.31-9.986.603-14.025a8.78 8.78 0 0 0-.601-.604zM329.16 256.034H208.997c-5.771 0-10.449 4.678-10.449 10.449s4.678 10.449 10.449 10.449H329.16c5.771 0 10.449-4.678 10.449-10.449s-4.678-10.449-10.449-10.449zM179.217 149.977c-3.919-4.131-10.425-4.364-14.629-.522l-33.437 31.869-14.106-14.629c-3.919-4.131-10.425-4.364-14.629-.522a10.971 10.971 0 0 0 0 15.151l21.42 21.943a9.403 9.403 0 0 0 7.314 3.135 10.446 10.446 0 0 0 7.314-3.135l40.751-38.661c4.04-3.706 4.31-9.986.603-14.025a8.78 8.78 0 0 0-.601-.604zM329.16 172.442H208.997c-5.771 0-10.449 4.678-10.449 10.449s4.678 10.449 10.449 10.449H329.16c5.771 0 10.449-4.678 10.449-10.449s-4.678-10.449-10.449-10.449zM179.217 317.16c-3.919-4.131-10.425-4.363-14.629-.522l-33.437 31.869-14.106-14.629c-3.919-4.131-10.425-4.363-14.629-.522a10.971 10.971 0 0 0 0 15.151l21.42 21.943a9.403 9.403 0 0 0 7.314 3.135 10.446 10.446 0 0 0 7.314-3.135l40.751-38.661c4.04-3.706 4.31-9.986.603-14.025a9.253 9.253 0 0 0-.601-.604zM329.16 339.626H208.997c-5.771 0-10.449 4.678-10.449 10.449s4.678 10.449 10.449 10.449H329.16c5.771 0 10.449-4.678 10.449-10.449s-4.678-10.449-10.449-10.449z" fill="#000000" data-original="#000000" class="hovered-path"></path></g></svg></i>Quản lý tin</a>
+            </li>
+            <button style="color: #ffffff;font-size: 14px;" class="btn btn-outline-success my-2 my-sm-0" id="btn-search" type="submit"><i style="margin-right: 6px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="20" height="20" x="0" y="0" viewBox="0 0 180.304 180.304" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path d="M0 23.812a9.476 9.476 0 0 1 9.476-9.476h80.548a4.738 4.738 0 0 1 0 9.476H9.476v142.143h161.095V85.407a4.739 4.739 0 0 1 9.476 0v80.548a9.475 9.475 0 0 1-9.476 9.476H9.476A9.475 9.475 0 0 1 0 165.955z" fill="#ffffff" data-original="#000000"></path><path fill-rule="evenodd" d="M161.445 14.363c-2.143-.126-4.609.577-7.05 3.018l-72.59 72.591-2.234 15.635 15.635-2.234 72.59-72.591c2.441-2.441 3.144-4.908 3.018-7.051-.134-2.259-1.22-4.552-3.018-6.351-1.799-1.798-4.092-2.884-6.351-3.017zm18.828 8.812c.293 4.977-1.517 10.048-5.777 14.308L101.89 110.09a9.403 9.403 0 0 1-5.345 2.664l-15.635 2.234c-6.254.894-11.615-4.467-10.721-10.72l2.233-15.636a9.473 9.473 0 0 1 2.68-5.36l72.591-72.591c4.26-4.259 9.331-6.07 14.308-5.777 4.86.286 9.268 2.55 12.494 5.777 3.228 3.226 5.493 7.634 5.778 12.494z" clip-rule="evenodd" fill="#ffffff" data-original="#000000"></path></g></svg></i>
+              Đăng tin</button>
+          </ul>
+      </form>
+    </div>
+  </nav>  
+        
+        <!-- Header Slider Start -->
+        <div id="headerSlider" class="carousel slide" data-ride="carousel" style="margin-top: 60px;">
+            <ol class="carousel-indicators" style="margin-bottom: 90px;">
+                <li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#headerSlider" data-slide-to="1"></li>
+                <li data-target="#headerSlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/sl1.jpg" alt="Royal Hotel">
+                    <div class="carousel-caption">
+                        <h1 class="animated fadeInRight">Có bảo hiểm thuê trọ</h1>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/sl2.jpg" alt="Royal Hotel">
+                    <div class="carousel-caption">
+                        <h1 class="animated fadeInLeft">Ở thử 1 tuần</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/sl1.jpg" alt="Royal Hotel">
+                    <!-- <div class="carousel-caption">
+                        <h1 class="animated fadeInRight">Rooms and Ideas</h1>
+                    </div>
+                </div> -->
+            </div>
+
+            <a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Header Slider End -->
+        
+
+        
+        <!-- Welcome Section Start -->
+        <h4 style="margin-top: 50px;">Khám phá Fazié</h4>
+        <div  class="card-group" style="padding-left: 100px;padding-right: 100px;margin-top: 30px;">
+            <div class="card">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 512 512;margin-left:auto;margin-right:auto;margin-top:12px" xml:space="preserve" class=""><g><path d="M17 21v-1h-2.5c-.827 0-1.5-.673-1.5-1.5v-2c0-.827.673-1.5 1.5-1.5h.5v-1h2v1h1a1 1 0 0 1 0 2h-3v1h2.5c.827 0 1.5.673 1.5 1.5v2c0 .827-.673 1.5-1.5 1.5H17v1h-2v-1h-1a1 1 0 0 1 0-2z" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M29.292 14.193 18.42 3.959a3.535 3.535 0 0 0-4.841 0L11 6.388V4a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v8.036l-2.263 2.131c-.687.596-.919 1.545-.593 2.418.321.86 1.107 1.415 2.002 1.415H5v10a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V18h.852c.896 0 1.683-.556 2.004-1.416.325-.873.092-1.822-.564-2.391zM7 5h2v3.27l-2 1.883zm20.982 10.885c-.043.115-.109.115-.13.115H26a1 1 0 0 0-1 1v10H7V17a1 1 0 0 0-1-1H4.146c-.021 0-.086 0-.129-.115a.202.202 0 0 1 .061-.235L14.95 5.416a1.533 1.533 0 0 1 2.099 0L27.95 15.677c.075.064.047.167.032.208z" fill="#ABC4FF" data-original="#000000" class=""></path></g></svg>
+              <div class="card-body">
+                <h5 class="card-title-1">Mua bán</h5>
+                <p class="card-text-1">157.999 tin mua bán</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 512 512.001" style="enable-background:new 0 0 512 512;margin-bottom:10px" xml:space="preserve" class=""><g><path d="M50 451.992c-5.523 0-10 4.477-10 10V462c0 5.52 4.477 9.996 10 9.996s10-4.48 10-10.004c0-5.523-4.477-10-10-10zM502 0h-80c-5.523 0-10 4.477-10 10v10.438l-13.344-.083h-.062c-5.492 0-9.965 4.434-10 9.934-.035 5.523 4.414 10.031 9.937 10.066l13.469.083v103.75c-26.184 16.492-49.816 6.996-74.762-3.051-16.437-6.621-33.441-13.465-50.406-11.336-5.352.672-19.797 2.77-35.086 4.988-14.488 2.102-29.473 4.277-34.625 4.926-2.621.328-5.234-.403-7.36-2.055a10.207 10.207 0 0 1-3.886-6.836c-.219-1.77-.8-6.476 11.73-12.293 26.528-12.3 54.797-22.832 77.563-28.89 5.336-1.422 8.512-6.899 7.09-12.239-1.418-5.336-6.895-8.507-12.235-7.09-23.836 6.344-53.3 17.31-80.832 30.079-9.578 4.441-15.464 9.609-18.933 14.82L90 142.55c-10.547 2.652-15.957-1.547-17.508-6.363-1.523-4.743.317-10.856 7.86-13.833 7.847-2.988 26.578-11.234 50.28-21.664 31.415-13.824 70.505-31.03 101.677-43.675 37.043-15.028 48.332-17.293 86.257-17.157h.032c5.507 0 9.98-4.457 10-9.968.015-5.524-4.45-10.016-9.973-10.032-40.453-.136-54.488 2.664-93.832 18.625-31.445 12.754-70.684 30.024-102.215 43.899-22.566 9.933-42.058 18.512-49.394 21.3l-.094.036c-18.684 7.328-24.02 24.96-19.637 38.59 4.317 13.43 19.16 25.293 41.547 19.609.059-.016.113-.027.172-.047l91.527-24.957c1.625 6.54 5.367 12.316 10.778 16.527 6.347 4.942 14.21 7.114 22.136 6.118 5.344-.672 19.75-2.766 35.004-4.977 14.528-2.11 29.543-4.289 34.707-4.937 11.817-1.485 25.723 4.113 40.442 10.042 15.597 6.282 33.367 13.442 52.597 13.438 9.547 0 19.457-1.781 29.637-6.297V170c0 5.523 4.477 10 10 10h80c5.523 0 10-4.477 10-10V10c0-5.523-4.477-10-10-10zm-10 160h-60V20h60zm0 0" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M462 60.008c5.523 0 10-4.477 10-10V50c0-5.52-4.477-9.996-10-9.996s-10 4.48-10 10.004c0 5.523 4.477 10 10 10zM186 326c23.73 0 44.73-11.883 57.395-30h36.945a10 10 0 0 0 7.07-2.93L304.48 276h11.72l17.07 17.07a10 10 0 0 0 7.07 2.93H356a10 10 0 0 0 7.07-2.93l30-30A10 10 0 0 0 396 256v-30c0-5.52-4.477-10-10-10H243.398c-12.668-18.117-33.664-30-57.398-30-38.598 0-70 31.402-70 70s31.402 70 70 70zm190-90v15.86L351.86 276h-7.376l-17.074-17.07a10 10 0 0 0-7.07-2.93h-20a10 10 0 0 0-7.07 2.93L276.2 276h-23.126c1.895-6.34 2.926-13.05 2.926-20s-1.031-13.66-2.926-20zm-190-30c27.57 0 50 22.43 50 50s-22.43 50-50 50-50-22.43-50-50 22.43-50 50-50zm0 0" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M166 266c5.523 0 10-4.48 10-10.004 0-5.523-4.477-10-10-10s-10 4.477-10 10v.008c0 5.523 4.477 9.996 10 9.996zM358.594 40.105h.004c5.523 0 9.996-4.48 9.996-10 0-5.523-4.48-10-10-10-5.524 0-10 4.477-10 10 0 5.52 4.476 10 10 10zM417 350.082c-.059.016-.113.027-.172.047l-91.527 24.957c-1.625-6.54-5.367-12.316-10.778-16.527-6.347-4.942-14.21-7.114-22.136-6.118-5.344.672-19.75 2.766-35.004 4.977-14.528 2.11-29.543 4.289-34.707 4.937-11.813 1.48-25.723-4.113-40.442-10.043-23.343-9.398-51.558-20.757-82.234-7.152v-3.156c0-5.524-4.477-10-10-10H10c-5.523 0-10 4.476-10 10V502c0 5.523 4.477 10 10 10h80c5.523 0 10-4.477 10-10v-10.438l13.344.083h.062c5.492 0 9.965-4.434 10-9.938.035-5.52-4.414-10.027-9.937-10.062L100 471.562v-103.75c26.184-16.492 49.816-6.996 74.762 3.047 16.441 6.625 33.449 13.47 50.406 11.336 5.355-.672 19.797-2.765 35.086-4.984 14.488-2.106 29.473-4.277 34.625-4.926 2.621-.328 5.234.399 7.36 2.055a10.192 10.192 0 0 1 3.886 6.836c.219 1.77.805 6.476-11.73 12.289-26.528 12.305-54.793 22.836-77.56 28.894-5.335 1.422-8.51 6.899-7.093 12.235 1.422 5.34 6.903 8.508 12.235 7.094 23.836-6.344 53.3-17.31 80.836-30.079 9.574-4.441 15.46-9.609 18.933-14.82L422 369.45c10.543-2.656 15.957 1.547 17.508 6.364 1.523 4.742-.317 10.855-7.856 13.832-7.843 2.988-26.582 11.234-50.289 21.668-31.41 13.824-70.5 31.027-101.672 43.671-37.043 15.028-48.355 17.301-86.257 17.157h-.032c-5.507 0-9.98 4.457-10 9.968-.015 5.524 4.45 10.016 9.973 10.032.816.004 1.621.004 2.418.004 38.617 0 52.867-2.989 91.414-18.63 31.441-12.753 70.684-30.023 102.211-43.898 22.57-9.933 42.062-18.512 49.395-21.3l.097-.036c18.684-7.328 24.02-24.96 19.637-38.59-4.317-13.425-19.16-25.289-41.547-19.609zM20 492V352h60V492zm0 0" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M153.41 471.895h-.008c-5.523 0-9.996 4.48-9.996 10 0 5.523 4.48 10 10.004 10 5.524 0 10-4.477 10-10 0-5.52-4.476-10-10-10zm0 0" fill="#ABC4FF" data-original="#000000" class=""></path></g></svg>
+                <h5 class="card-title-1">Cho thuê</h5>
+                <p class="card-text-1">199.221 tin đăng cho thuê</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 480 480" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(0.9999999999999994,0,0,0.9999999999999994,1.1368683772161603e-13,1.1368683772161603e-13)"><path d="M472 464h-48V200a8 8 0 0 0-8-8H304V8a8 8 0 0 0-8-8H88a8 8 0 0 0-8 8v456H8a8 8 0 0 0 0 16h464a8 8 0 0 0 0-16zm-304 0h-32v-72a8 8 0 0 1 8-8h16a8 8 0 0 1 8 8v72zm32-264v264h-16v-72c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v72H96V16h192v176h-80a8 8 0 0 0-8 8zm208 264H216V208h192v256z" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M256 112h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8zm-8 48h-32v-32h32v32zM256 32h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V40a8 8 0 0 0-8-8zm-8 48h-32V48h32v32zM176 112h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8zm-8 48h-32v-32h32v32zM176 32h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8V40a8 8 0 0 0-8-8zm-8 48h-32V48h32v32zM176 192h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8zm-8 48h-32v-32h32v32zM176 272h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8zm-8 48h-32v-32h32v32zM328 368h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32zM328 288h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32zM328 448h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32zM248 368h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32zM248 288h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32zM248 448h48a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8h-48a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8zm8-48h32v32h-32v-32z" fill="#ABC4FF" data-original="#000000" class=""></path></g></svg>                
+                <h5 class="card-title-1" style="margin-top: 10px;">Dự án</h5>
+                <p class="card-text-1">4.117 dự án</p>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M394.2 278c-90.4-28.6-186.1-28.5-276.5 0-46.6 14.7-78 58-78 107.7v110.2c0 7.8 6.3 14.1 14.1 14.1h404.3c7.8 0 14.1-6.3 14.1-14.1V385.7c0-49.7-31.3-93-78-107.7zM256 290.7l17.5 17.5-9.1 8.8h-16.7l-9.2-8.8zM68 481.8v-96.1c0-37.3 23.4-69.8 58.3-80.8 30.9-9.8 62.5-15.9 94.3-18.6l-12.2 12.2c-5.6 5.6-5.5 14.7.2 20.2l18.1 17.3-22.2 113.4c-.9 4.6.5 9.4 3.9 12.7l19.7 19.7zm188-12-22.4-22.4 20-102.2h4.8l20 102.2zm188 12H284l19.7-19.7c3.3-3.3 4.8-8.1 3.9-12.7L285.4 336l18.1-17.3c5.7-5.5 5.8-14.6.2-20.2l-12.2-12.2c31.8 2.6 63.3 8.8 94.3 18.6 34.9 11 58.3 43.5 58.3 80.8v96.1zM256 230.1c57.4 0 104.1-51.2 104.1-114.1S313.4 2 256 2 151.9 53.2 151.9 116.1s46.7 114 104.1 114zm0-199.9c41.8 0 75.8 38.5 75.8 85.8s-34 85.8-75.8 85.8-75.8-38.5-75.8-85.8 34-85.8 75.8-85.8z" fill="#ABC4FF" data-original="#000000" class=""></path><path d="M389.2 389.8H346c-7.8 0-14.1 6.3-14.1 14.1S338.2 418 346 418h43.3c7.8 0 14.1-6.3 14.1-14.1-.1-7.8-6.4-14.1-14.2-14.1z" fill="#ABC4FF" data-original="#000000" class=""></path></g></svg>
+                  <h5 class="card-title-1" style="margin-top: 12px;">Môi giới</h5>
+                  <p class="card-text-1">175 chuyên trang</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 442 442" style="enable-background:new 0 0 512 512" xml:space="preserve" class="hovered-paths"><g><path d="M171 336H70c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.523 0 10-4.477 10-10s-4.477-10-10-10zM322 336H221c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.522 0 10-4.477 10-10s-4.478-10-10-10zM322 86H70c-5.523 0-10 4.477-10 10s4.477 10 10 10h252c5.522 0 10-4.477 10-10s-4.478-10-10-10zM322 136H221c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.522 0 10-4.477 10-10s-4.478-10-10-10zM322 186H221c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.522 0 10-4.477 10-10s-4.478-10-10-10zM322 236H221c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.522 0 10-4.477 10-10s-4.478-10-10-10zM322 286H221c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.522 0 10-4.477 10-10s-4.478-10-10-10zM171 286H70c-5.523 0-10 4.477-10 10s4.477 10 10 10h101c5.523 0 10-4.477 10-10s-4.477-10-10-10zM171 136H70c-5.523 0-10 4.477-10 10v101c0 5.523 4.477 10 10 10h101c5.523 0 10-4.477 10-10V146c0-5.523-4.477-10-10-10zm-10 101H80v-81h81v81z" fill="#abc4ff" data-original="#000000" opacity="1" class="hovered-path"></path><path d="M422 76h-30V46c0-11.028-8.972-20-20-20H20C8.972 26 0 34.972 0 46v320c0 27.57 22.43 50 50 50h342c27.57 0 50-22.43 50-50V96c0-11.028-8.972-20-20-20zm0 290c0 16.542-13.458 30-30 30H50c-16.542 0-30-13.458-30-30V46h352v305c0 13.785 11.215 25 25 25 5.522 0 10-4.477 10-10s-4.478-10-10-10c-2.757 0-5-2.243-5-5V96h30v270z" fill="#abc4ff" data-original="#000000" opacity="1" class="hovered-path"></path></g></svg>                  <h5 class="card-title-1" style="margin-top: 12px;">News</h5>
+                  <p class="card-text-1">175 chuyên trang</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60" x="0" y="0" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M151.57 208.93c-1.86-1.86-4.44-2.93-7.07-2.93s-5.209 1.069-7.07 2.93c-1.86 1.86-2.93 4.44-2.93 7.07s1.07 5.21 2.93 7.069c1.86 1.86 4.44 2.931 7.07 2.931s5.21-1.07 7.07-2.931c1.86-1.859 2.93-4.439 2.93-7.069s-1.07-5.21-2.93-7.07z" fill="#abc4ff" data-original="#000000" opacity="1" class=""></path><path d="M482 0H84C67.458 0 54 13.458 54 30v166c0 16.542 13.458 30 30 30h18c5.523 0 10-4.478 10-10s-4.477-10-10-10H84c-5.514 0-10-4.486-10-10V30c0-5.514 4.486-10 10-10h398c5.514 0 10 4.486 10 10v166c0 5.514-4.486 10-10 10h-66.887a10.001 10.001 0 0 0-7.071 2.929l-32.929 32.929-32.929-32.929a10.001 10.001 0 0 0-7.071-2.929h-77.985a58.724 58.724 0 0 0-2.507-5.579c-7.16-13.911-19.348-24.078-34.316-28.629l-14.458-4.396c-5.09-1.55-10.502 1.162-12.312 6.165l-22.718 62.789a75.664 75.664 0 0 1-34.993 40.74l-21.326 11.612c-5.241-6.362-13.176-10.425-22.043-10.425h-63.9c-15.744 0-28.552 12.809-28.552 28.553v176.616C.001 499.191 12.81 512 28.554 512h63.9c9.954 0 18.729-5.123 23.841-12.868l10.204 4.002a127.9 127.9 0 0 0 46.898 8.868h134.928c20.245 0 36.715-16.47 36.715-36.715a36.47 36.47 0 0 0-4.962-18.396c14.894-4.681 25.729-18.615 25.729-35.034a36.489 36.489 0 0 0-5.2-18.81c14.26-5.044 24.506-18.655 24.506-34.621 0-16.63-11.118-30.705-26.308-35.203a36.475 36.475 0 0 0 4.865-18.229c0-20.244-16.47-36.715-36.715-36.715h-80.188l11.214-33.294a57.464 57.464 0 0 0 3.02-18.984h69.97l37.071 37.071c1.953 1.952 4.512 2.929 7.071 2.929s5.119-.977 7.071-2.929L419.256 226H482c16.542 0 30-13.458 30-30V30c0-16.542-13.458-30-30-30zM101.007 483.447c-.001 4.716-3.837 8.553-8.553 8.553h-63.9c-4.716 0-8.552-3.837-8.552-8.553V306.831c0-4.716 3.836-8.553 8.552-8.553h21.95v123.121c0 5.522 4.477 10 10 10s10-4.478 10-10V298.278h21.95c3.735 0 6.91 2.411 8.073 5.755.083.484.203.964.361 1.439.071.444.119.895.119 1.359v176.616zm225.949-185.17v.001c9.217 0 16.715 7.498 16.715 16.715 0 9.217-7.498 16.716-16.715 16.716h-54.251c-5.523 0-10 4.478-10 10s4.477 10 10 10l75.694.002c9.217 0 16.715 7.498 16.715 16.715 0 9.217-7.498 16.716-16.715 16.716h-75.694c-5.523 0-10 4.478-10 10s4.477 10 10 10h56.388c9.217 0 16.715 7.498 16.715 16.715 0 9.217-7.498 16.715-16.715 16.715h-56.388c-5.523 0-10 4.478-10 10s4.477 10 10 10h35.621c9.217 0 16.715 7.499 16.715 16.716 0 9.217-7.498 16.715-16.715 16.715H173.397c-13.607 0-26.929-2.52-39.596-7.487l-12.795-5.018V307.931l24.381-13.276a95.638 95.638 0 0 0 44.235-51.5l19.489-53.862 5.376 1.634c9.75 2.965 17.688 9.587 22.352 18.647s5.441 19.369 2.188 29.026l-15.657 46.485a10 10 0 0 0 9.477 13.192h94.109z" fill="#abc4ff" data-original="#000000" opacity="1" class=""></path><path d="M466.201 96.976c-1.894-5.824-6.836-9.989-12.898-10.868l-17.688-2.565-7.915-16.025c-2.712-5.491-8.199-8.901-14.323-8.901h-.004c-6.125.002-11.613 3.415-14.322 8.908l-7.906 16.03-17.688 2.575c-6.061.883-11.001 5.05-12.892 10.876-1.891 5.825-.341 12.1 4.047 16.375l12.802 12.472-3.017 17.617c-1.034 6.038 1.402 12.023 6.359 15.623a15.918 15.918 0 0 0 9.372 3.065c2.54 0 5.094-.613 7.453-1.854l15.819-8.322 15.823 8.313c5.422 2.848 11.868 2.381 16.823-1.221 4.954-3.602 7.387-9.589 6.35-15.626l-3.026-17.615 12.797-12.48c4.381-4.278 5.928-10.553 4.034-16.377zm-32.313 16.017a15.971 15.971 0 0 0-4.59 14.141l2.003 11.662-10.479-5.506a15.977 15.977 0 0 0-14.864.006l-10.473 5.51 1.997-11.663a15.97 15.97 0 0 0-4.598-14.14l-8.477-8.258 11.711-1.705a15.965 15.965 0 0 0 12.025-8.741l5.235-10.613 5.24 10.61a15.973 15.973 0 0 0 12.03 8.735l11.711 1.698-8.471 8.264zM338.988 96.976c-1.895-5.824-6.836-9.988-12.898-10.868l-17.688-2.565-7.915-16.025c-2.712-5.491-8.199-8.901-14.323-8.901h-.004c-6.125.002-11.614 3.415-14.323 8.909l-7.905 16.029-17.688 2.575c-6.061.883-11.001 5.05-12.892 10.876-1.891 5.825-.341 12.1 4.047 16.375l12.802 12.472-3.017 17.617c-1.034 6.038 1.403 12.024 6.359 15.623a15.915 15.915 0 0 0 9.371 3.065c2.54 0 5.093-.613 7.452-1.854l15.819-8.322 15.824 8.313c5.423 2.848 11.867 2.381 16.823-1.221 4.954-3.602 7.387-9.589 6.35-15.626l-3.026-17.615 12.797-12.48c4.383-4.278 5.93-10.552 4.035-16.377zm-32.313 16.017a15.971 15.971 0 0 0-4.59 14.141l2.003 11.662-10.479-5.505a15.974 15.974 0 0 0-14.865.005l-10.473 5.51 1.997-11.663a15.97 15.97 0 0 0-4.598-14.14l-8.477-8.258 11.71-1.705a15.972 15.972 0 0 0 12.027-8.742l5.234-10.613 5.239 10.609a15.971 15.971 0 0 0 12.031 8.737l11.711 1.698-8.47 8.264zM211.776 96.976c-1.895-5.824-6.837-9.989-12.898-10.868l-17.688-2.565-7.915-16.025c-2.712-5.491-8.199-8.901-14.323-8.901h-.004c-6.125.002-11.614 3.415-14.323 8.909l-7.905 16.029-17.688 2.575c-6.062.883-11.001 5.051-12.893 10.877-1.891 5.825-.34 12.1 4.047 16.374l12.802 12.472-3.017 17.617c-1.034 6.038 1.403 12.024 6.359 15.623a15.915 15.915 0 0 0 9.371 3.065c2.54 0 5.093-.613 7.452-1.854l15.819-8.322 15.823 8.313c5.422 2.848 11.868 2.381 16.823-1.221 4.954-3.602 7.387-9.589 6.35-15.626l-3.026-17.615 12.797-12.48c4.385-4.278 5.931-10.552 4.037-16.377zm-32.313 16.017a15.971 15.971 0 0 0-4.59 14.141l2.003 11.662-10.479-5.505a15.974 15.974 0 0 0-14.865.005l-10.473 5.51 1.998-11.666a15.977 15.977 0 0 0-4.599-14.137l-8.477-8.258 11.71-1.705a15.972 15.972 0 0 0 12.027-8.742l5.234-10.613 5.239 10.609a15.971 15.971 0 0 0 12.031 8.737l11.712 1.698-8.471 8.264zM60.504 447.359c-5.523 0-10 4.478-10 10v.156c0 5.522 4.477 10 10 10s10-4.478 10-10v-.156c0-5.522-4.477-10-10-10z" fill="#abc4ff" data-original="#000000" opacity="1" class=""></path></g></svg>                  
+<h5 class="card-title-1" style="margin-top: 12px;"><a style="color: black;" href="review.html">Reviews</a></h5>
+                  <p class="card-text-1">0 chuyên trang</p>
+                </div>
+              </div>
+          </div>
+        <!-- Welcome Section End -->
+        <h4 style="margin-top: 50px;">Mua bán bất động sản</h4>
+        <div class="card-deck" style="padding-left: 100px;padding-right: 100px;margin-top: 30px;">
+            <div class="card" id="card-home">
+              <img class="card-img-top" src="img/File 1/1fadb03e2820f87ea1316.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Mặt bằng 15m dt 140m2 ngang 8m khu biển phạm văn đồng sầm uất đẹp rẻ</h5>
+                <p style="text-align: left;">156m&#xb2;</p>
+                <p class="card-text-price">3tr/tháng</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card" id="card-home">
+              <img class="card-img-top" src="img/File 1/8b275fb4c7aa17f44ebb3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">PHÒNG FULL NT KẾ BÊN CẦU PHÚ MỸ</h5>
+                <p style="text-align: left;">156m&#xb2;</p>
+                <p class="card-text-price">4tr5/tháng</p>
+            </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card" id="card-home">
+              <img class="card-img-top" src="img/File 2/110077d3efcd3f9366dc10.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">PHÒNG TRỌ CAO CẤP QUANG TRUNG</h5>
+                <p style="text-align: left;">256m&#xb2;</p>
+                <p class="card-text-price">5tr5/tháng</p>
+
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <div class="card" id="card-home">
+                <img class="card-img-top" src="img/File 2/57996877f069203779787.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">PHÒNG TRỌ THUÊ Q3 SẠCH SẼ THOÁNG MÁT</h5>
+                  <p style="text-align: left;">106m&#xb2;</p>
+                  <p class="card-text-price">4tr5/tháng</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+              <div class="card" id="card-home">
+                <img class="card-img-top" src="img/File 2/a0b8de6b4675962bcf648.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">PHÒNG FULL NT KẾ BÊN CẦU Thuận Phước</h5>
+                  <p style="text-align: left;">106m&#xb2;</p>
+                  <p class="card-text-price">1tr5/tháng</p>
+
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+          </div>
+          <div class="card-more" style="margin-top: 30px;">
+            <a href="room.html" id="">Xem thêm 190.231 tin khác</a>
+          </div> 
+          
+          <div>
+            <h4 style="margin-top: 50px;">Ưu đãi / Chương trình</h4>
+            <div class="card-deck" style="padding-left: 100px;padding-right: 100px;margin-top: 30px;">
+              <div class="card" >
+                <img class="card-img-top" src="img/sl1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title"style="text-align: center;">Có bảo hiểm thuê trọ</h5>
+                    <div>
+                  <button id="btntimhieu">Tìm hiểu ngay</button>
+                </div>
+                </div>
+              </div>
+              <div class="card" >
+                <img class="card-img-top" src="img/sl2.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Ở thử 1 tuần</h5>
+                  <button id="btntimhieu">Tìm hiểu ngay</button>
+              </div>
+              </div>
+          </div>
+          
+        <!-- Amenities Section Start -->
+        
+        <!-- Amenities Section Start -->
+        
+        
+        <!-- Room Section End -->
+        
+        <!-- Modal for Room Section Start -->
+    
+        <!-- Modal for Room Section End -->
+        
+        <!-- Subscribe Section Start -->
+
+        <!-- Subscribe Section End -->
+        
+        <!-- Booking Section Start -->
+     
+        <!-- Booking Section End -->
+        
+        <!-- Call Section Start -->
+        <!-- <div id="call-us">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Call Us</h2>
+                    <p>
+                        Địa chỉ: 158A Lê Lợi, phường Hải Châu 1, quận Hải Châu, thành phố Đà Nẵng
+                        Email: sale.pineohotel@gmail.com
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="tel:+(84) 886 929 567">+(84) 886 929 567</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Call Section End -->
+        
+        <!-- Footer Section Start -->
+        <div id="footer" style="margin-top: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="social">
+                            <a href=""><li class="fa fa-facebook-f"></li></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p>Copyright 2045 All Rights Reserved.</p>
+						
+						<p>Designed By <a href="https://www.facebook.com/hoang.giauy.92/">YuAig</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section End -->
+        
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Vendor JavaScript File -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/jquery/jquery-migrate.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/easing/easing.min.js"></script>
+        <script src="vendor/stickyjs/sticky.js"></script>
+        <script src="vendor/superfish/hoverIntent.js"></script>
+        <script src="vendor/superfish/superfish.min.js"></script>
+        <script src="vendor/wow/wow.min.js"></script>
+        <script src="vendor/slick/slick.min.js"></script>
+        <script src="vendor/tempusdominus/js/moment.min.js"></script>
+        <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Booking Javascript File -->
+        <script src="js/booking.js"></script>
+        <script src="js/jqBootstrapValidation.min.js"></script>
+  
+        <!-- Main Javascript File -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
